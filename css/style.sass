@@ -1,0 +1,65 @@
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Manrope', sans-serif
+
+header
+  background-color: #124862
+  display: flex
+  justify-content: space-between
+  padding: 0 30px
+  align-items: center
+  height: 80px
+
+button
+  outline: none
+
+.logo
+  color: #ffffff
+  font-size: 16px
+  font-weight: 700
+
+.cart-btn
+  background-color: #fff
+  border: 1px solid transparent
+  padding: 10px 20px
+  cursor: pointer
+  &:hover
+    background-color: #124862
+    color: #fff
+    border-color: #fff
+
+
+.products
+  display: grid
+  column-gap: 20px
+  grid-template-columns: repeat(auto-fit, 200px)
+  grid-template-rows: 1fr
+  padding: 30px
+  justify-content: space-between
+
+.product-item
+  display: flex
+  flex-direction: column
+  width: 200px
+  overflow: hidden
+  margin: 20px 0
+
+.buy-btn
+  margin-top: 5px
+  background-color: #124862
+  padding: 10px 20px
+  border: 0
+  color: #fafafa
+  cursor: pointer
+  &:hover
+    background-color: #2094be
+.description
+  padding: 15px
+img
+  height: auto
+  width: 100%
+p, h3
+  margin-top: 5px

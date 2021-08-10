@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+header {
+  background-color: #124862;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+  height: 80px;
+}
+
+button {
+  outline: none;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cart-btn {
+  background-color: #fff;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.cart-btn:hover {
+  background-color: #124862;
+  color: #fff;
+  border-color: #fff;
+}
+
+.products {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: 1fr;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.buy-btn {
+  margin-top: 5px;
+  background-color: #124862;
+  padding: 10px 20px;
+  border: 0;
+  color: #fafafa;
+  cursor: pointer;
+}
+.buy-btn:hover {
+  background-color: #2094be;
+}
+
+.description {
+  padding: 15px;
+  border: 2px dashed #124862;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+p, h3 {
+  margin-top: 5px;
+}
+
+
+.header {
+  position: relative;
+}
+.cart {
+  display: flex;
+  align-items: center;
+}
+.cart-drop {
+  position: absolute;
+  right: 31px;
+  top: 74px;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 300px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
+}
+.cart-item {
+  border-bottom: 1px solid #124862;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.invisible{
+  display: none;
+}
+
+.delete-btn{
+  color: rgb(146, 30, 30);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 0px 7px;
+  cursor:pointer;
+}
+
+.delete-btn:hover{
+  color: #fff;
+  background-color: rgb(146, 30, 30);
+}
+.cart-title, .cart-allprice{
+  font-weight: 800;
+}
+.cart-img{
+  width: 100px;
+}
+
+.search-field {
+  padding: 7px;
+  font-size: 16px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: #fff;
+}
+.btn-search {
+  color: #fff;
+  background: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+
+.search-form{
+  position: relative;
+  display: inline-block;
+  
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="logo">Интернет-магазин</div>
+            <div class="cart">
+                <form action="#" class="search-form" @submit.prevent="filterProducts">
+                    <input type="text" class="search-field" v-model="searchLine">
+                    <button class="btn-search" type="submit" @click="filterProducts($event)">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <button class="cart-btn" @click="showCart = !showCart">Корзина</button>
+                <div class="cart-drop" v-show="showCart">
+                    <div class="cart-item" v-for="product of cartProducts" :key="product.id_product">
+                        <img class="cart-img" :src="catalogIMG">
+                        <div class="cart-text"> 
+                            <p class="cart-title">{{ product.product_name }}</p>
+                            <p class="cart-count">Кол-во: <span class="count-item">{{ product.quantity }}</span></p>
+                            <p><span class="cart-price">{{ product.price }}</span> за ед.</p>
+                            <p class="cart-allprice">{{ product.quantity*product.price }}</p>
+                        </div>
+                        <div class="delete-btn" @click="removeProductFromCart(product)">x</div>
+                    </div>
+                    <!-- <div>Итого: <span class="total">0</span></div> -->
+                    <div v-if="!cartProducts.length">Корзина пуста</div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="products">
+                <div class="product-item" v-for="product of filtered" :key="product.id_product">
+                    <img :src="catalogIMG" alt="">
+                    <div class="description">
+                        <h3>{{ product.product_name }}</h3>
+                        <p>{{ product.price }}</p>
+                        <button class="buy-btn" @click="addProductToCart(product)">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
