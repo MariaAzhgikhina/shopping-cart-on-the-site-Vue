@@ -26,19 +26,6 @@ button {
   font-weight: 700;
 }
 
-.cart-btn {
-  background-color: #fff;
-  border: 1px solid transparent;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-.cart-btn:hover {
-  background-color: #124862;
-  color: #fff;
-  border-color: #fff;
-}
-
 .products {
   display: grid;
   column-gap: 20px;
@@ -70,7 +57,6 @@ button {
 
 .description {
   padding: 15px;
-  border: 2px dashed #124862;
 }
 
 img {
@@ -82,10 +68,10 @@ p, h3 {
   margin-top: 5px;
 }
 
-
 .header {
   position: relative;
 }
+
 .cart {
   display: flex;
   align-items: center;
@@ -109,39 +95,41 @@ p, h3 {
   align-items: center;
   padding-bottom: 10px;
 }
+.cart-title, .cart-allprice {
+  font-weight: 800;
+}
+.cart-img {
+  width: 100px;
+}
+.cart-btn {
+  background-color: #fff;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.cart-btn:hover {
+  background-color: #124862;
+  color: #fff;
+  border-color: #fff;
+}
 
-.invisible{
+.invisible {
   display: none;
 }
 
-.delete-btn{
-  color: rgb(146, 30, 30);
-  background-color: rgb(255, 255, 255);
+.delete-btn {
+  color: #921e1e;
+  background-color: white;
   border-radius: 50%;
   padding: 0px 7px;
-  cursor:pointer;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  color: #fff;
+  background-color: #921e1e;
 }
 
-.delete-btn:hover{
-  color: #fff;
-  background-color: rgb(146, 30, 30);
-}
-.cart-title, .cart-allprice{
-  font-weight: 800;
-}
-.cart-img{
-  width: 100px;
-}
-
-.search-field {
-  padding: 7px;
-  font-size: 16px;
-  background: none;
-  border: 0;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  color: #fff;
-}
 .btn-search {
   color: #fff;
   background: none;
@@ -154,9 +142,19 @@ p, h3 {
   bottom: 5px;
 }
 
-.search-form{
+.search-form {
   position: relative;
   display: inline-block;
-  
 }
+
+.search-field {
+  padding: 7px;
+  font-size: 16px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
