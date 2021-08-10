@@ -2,7 +2,7 @@
  * Created by asus on 10.08.2021.
  */
 Vue.component('cart', {
-    data: function () {
+    data() {
         return {
             basketURL: '/getBasket.json',
             catalogIMG: 'http://placehold.it/120x120',

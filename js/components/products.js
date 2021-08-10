@@ -2,7 +2,7 @@
  * Created by asus on 10.08.2021.
  */
 Vue.component('products', {
-    data: function () {
+    data(){
         return {
             products: [],
             filtered: [],
@@ -11,8 +11,9 @@ Vue.component('products', {
         }
     },
     methods: {
-        filterProducts() {
-            const regexp = new RegExp(this.searchLine, 'i');
+        filterProducts(value) {
+            console.log(value);
+            const regexp = new RegExp(value, 'i');
             this.filtered = this.products.filter(product => regexp.test(product.product_name));
         }
     },
